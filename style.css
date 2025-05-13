@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: bisque;
+}
+
+img{
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    min-height: 100%;
+}
+
+.side_boxes article{
+    background-color: aliceblue;
+    margin: 10px 30px 10px 30px;
+    padding: 5px;
+}
+
+header{
+    background-color: rgb(255, 128, 0);
+    text-align: center;
+}
+
+header img{
+    max-width: 50%;
+}
+
+main{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#dixie_layers{
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dixie_hair_layer, .dixie_dress_layer {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+.dixie_base_layer {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+.dixie_layers img{
+    image-rendering: optimizeSpeed;
+}
+
+#dixie{
+    grid-column: 1;
+    grid-row: span 6;
+    /* justify-items: center; */
+    border: 10px deeppink solid;
+    /* justify-self: center; */
+}
+
+#dixie figure{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#dixie figure img{
+    width: 100%;
+    height: auto;
+}
+
+#category_buttons{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#clothing_select{
+    grid-column: 2;
+    grid-row: 3 /span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: coral;
+    height: 90%;
+    margin: 10px 20px 10px 20px;
+    
+}
+
+#misc_buttons{
+    grid-column: 2;
+    grid-row: 5;
+}
+
+#category_buttons, #misc_buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#category_buttons img, #misc_buttons img{
+    max-height: 100px;
+    max-width: 100px;
+}
+
+#clothing_select figure{
+    /* min-width: 50px;
+    min-height: 50px; */
+    max-height: 80px;
+    max-width: 80px;
+    margin: 5px;
+    background-color: aliceblue;
+}
+
+footer{
+    background-color: rgb(255, 128, 0);
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+      background-color: lightblue;
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        min-height: 100%;
+    }
+
+    #left_boxes{
+        display: flex;
+        order: 1;
+    }
+
+    #right_boxes{
+        display: flex;
+        order: 0;
+    }
+
+    .main{
+        order: 2;
+    }
+
+    .side_boxes article{
+        margin: 10px;
+    }
+
+    main{
+    display: grid;
+    align-items: normal;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+    #dixie{
+        grid-column: 1 /span 2;
+        grid-row: 2 /span 4;
+        justify-items: center;
+        background-color: bisque;
+    }
+    
+    #category_buttons{
+        grid-column: 1 /span 2;
+        grid-row: 1;
+    }
+    
+    #clothing_select{
+        grid-column: 3;
+        grid-row: 1 /span 6;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        background-color: coral;
+    }
+    
+    #misc_buttons{
+        grid-column: 1 /span 2;
+        grid-row: 6;
+    }
+    
+    #category_buttons, #misc_buttons{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #category_buttons img, #misc_buttons img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    #clothing_select figure{
+        margin: 5px;
+        background-color: aliceblue;
+    }
+  }
