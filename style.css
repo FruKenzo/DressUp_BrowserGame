@@ -64,7 +64,7 @@ main{
     left: 0;
   }
 
-.dixie_layers img{
+.dixie_layers img, .dixie_layers figure{
     image-rendering: optimizeSpeed;
 }
 
