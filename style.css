@@ -48,7 +48,7 @@ main{
     height: 100%;
 }
 
-.dixie_hair_layer, .dixie_dress_layer {
+.dixie_hair_layer, .dixie_dress_layer, .dixie_shoe_layer {
     display: block;
     position: absolute;
     left: 0;
@@ -127,7 +127,9 @@ main{
     max-height: 80px;
     max-width: 80px;
     margin: 5px;
-    background-color: aliceblue;
+    background-color: navajowhite;
+    padding: 3px;
+    border-radius: 25px;
 }
 
 footer{
@@ -211,6 +213,6 @@ footer{
     
     #clothing_select figure{
         margin: 5px;
-        background-color: aliceblue;
+        background-color: navajowhite;
     }
   }
